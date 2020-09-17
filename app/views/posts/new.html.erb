@@ -2,19 +2,6 @@
 
 <h1>Nuevo post</h1>
 
-<%= form_with model: @post, local: true do |form| %>
-
-    <%= form.label :title %> <br>
-    <%=form.text_field :title %> <br>
-
-    <%=form.label :content %> <br>
-    <%=form.text_area :content, cols: 30, rows: 10 %> <br>
-
-    <%=form.label :autor %> <br>
-    <%=form.text_field :autor %> <br>
-
-    <%= form.submit 'Crear post'%>
-
-<% end %>
+<%= render 'form', post: @post %>
 
 <%= link_to 'atras', root_path%>

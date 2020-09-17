@@ -4,7 +4,7 @@
 <p><%= @post.content %></p>
 <h5><%= @post.autor %></h5>
 
-<%= link_to 'borrar', destroy_post_path(@post.id), method: :delete, data: {confirm: 'estas seguro?'}%>
+<%= link_to 'borrar', @post, method: :delete, data: {confirm: 'estas seguro?'}%>
 
 <%= link_to 'editar', edit_post_path(@post.id)%>
 
