@@ -1,1 +1,11 @@
 <h1>Este es el index de posts</h1>
+
+<%= link_to 'nuevo post', posts_path %>
+
+<% @posts.each do |post| %>
+    <h2><%= post.title %></h2>
+    <p><%= post.content %></p>
+    <h5><%= post.autor %></h5>
+
+    <%= link_to 'ver', show_post_path(post.id) %>
+<% end %>

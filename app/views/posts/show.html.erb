@@ -1,0 +1,9 @@
+<h1>post elegido</h1>
+
+<h2><%= @post.title %></h2>
+<p><%= @post.content %></p>
+<h5><%= @post.autor %></h5>
+
+<%= link_to 'borrar', destroy_post_path(@post.id) %>
+
+<%= link_to 'atras', root_path %>
